@@ -1,0 +1,36 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Sep 20 17:08:18 2021
+
+@author: zhanghanqing
+"""
+
+# 1
+s = 'azcbobobegghakl'
+count = 0
+for i in s:
+    if i == 'a' or i == 'e' or i == 'i' or i == 'o' or i == 'u':
+        count += 1
+print('Number of vowels:', count)
+
+# 2
+s = 'azcbobobegghakl'
+count = 0
+for i in range(len(s)-2):
+    if s[i] == 'b' and s[i+1]  == 'o' and s[i+2]  == 'b':
+        count += 1
+print('Number of times bob occurs is:', str(count))
+
+# 3
+s = "azcbobobegghakl"
+longest = s[0]
+current = s[0]
+for c in s[1:]:
+    if c >= current[-1]:
+        current += c
+        if len(current) > len(longest):
+            longest = current
+    else:
+        current = c
+print("Longest substring in alphabetical order is:", longest)

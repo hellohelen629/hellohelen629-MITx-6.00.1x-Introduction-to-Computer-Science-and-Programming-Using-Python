@@ -1,0 +1,28 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Sep 22 11:11:13 2021
+
+@author: zhanghanqing
+"""
+#Problem set 2
+# 2
+balance = 4773; annualInterestRate = 0.2
+
+initial = 10
+balance1 = balance
+
+while balance1 > 0:
+    
+      iteration = 0
+      initial += 10
+      balance1 = balance
+      while iteration < 12:
+            balance1 -= initial
+            balance1 += annualInterestRate/12*balance1
+            iteration += 1
+      
+      
+     
+
+print("Lowest payment:", initial)
