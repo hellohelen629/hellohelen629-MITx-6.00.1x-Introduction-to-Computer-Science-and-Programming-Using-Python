@@ -83,7 +83,23 @@ class Hand(object):
         returns: Boolean (if the word was or was not made)
         """
         # Your code here
-        raise NotImplementedError()
+        l = []
+        for e in word:
+            if e in self.hand.keys():                     
+                l.append(True)
+            else: 
+                l.append(False)
+                
+        if False in l:
+            return False
+        else:
+            for e in word:
+                self.hand[e] -= 1
+            return True
+        
+        
+        
+                
 
     
 myHand = Hand(7)
